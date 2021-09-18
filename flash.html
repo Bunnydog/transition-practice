@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>白光闪过效果</title>
+    <style>
+
+        .box{
+            width: 225px;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box::before{
+            content: "";
+            width: 100px;
+            height: 225px;
+            background-color:rgba(225, 225, 255,0.4);
+            position: absolute;
+            left: -1400px;
+            transform: skew(-30deg);
+            
+        }
+
+        .box:hover::before{
+            left: 300px;
+            transition: 0.8s;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <div class="box">
+        <img src="./img/photo5.png" alt="小新">
+    </div>
+    
+</body>
+</html>
